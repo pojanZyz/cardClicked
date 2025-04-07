@@ -1,14 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import cardRouter from './src/router/cardRouter.js';
+import {router} from './src/router/cardRouter.js';
 
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/card', cardRouter);
+app.use('/card', router);
 app.use('/', (req, res) => {
     res.send('Welcome to the Card API!');
 });
