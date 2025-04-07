@@ -1,5 +1,5 @@
 import express from "express";
-import upload from "../config/multer.js";
+import upload from "../middleware/uploadFile.js";
 import createCard from "../controller/cardController.js";
 
 const router = express.Router();
